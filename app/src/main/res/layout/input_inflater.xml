@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:minWidth="300dp"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <EditText
+        android:id="@+id/audio_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="35dp"
+        android:background="@drawable/button_background"
+        android:layout_marginBottom="20dp"
+        android:textAllCaps="false"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"/>
+
+
+
+</LinearLayout>

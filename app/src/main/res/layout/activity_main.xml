@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:animateLayoutChanges="true"
+
+   >
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:title="@string/app_name"
+        android:titleTextColor="@color/white"
+        app:titleTextColor="@color/white">
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/defaultLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="30dp"
+        android:layout_below="@+id/toolbar"
+        android:visibility="gone"
+        >
+
+    <TextView
+        android:id="@+id/phoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Phone Numebr"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"/>
+
+    <EditText
+        android:id="@+id/phoneNumberContainer"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/phoneNumber"
+        android:inputType="phone"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Name"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/phoneNumber"
+        android:layout_marginTop="100dp"/>
+    <EditText
+        android:id="@+id/nameContainer"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/name"
+        android:inputType="text"/>
+
+    <TextView
+        android:id="@+id/chooseTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Configure Timer"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/nameContainer"
+        android:layout_marginTop="30dp"/>
+    <RadioGroup
+        android:id="@+id/timerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chooseTime"
+        android:layout_margin="30dp"
+        android:layout_centerHorizontal="true">
+
+        <RadioButton
+            android:id="@+id/thirty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="60 secs"/>
+        <RadioButton
+            android:id="@+id/sixty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5 mins"/>
+        <RadioButton
+            android:id="@+id/minutes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10 mins"/>
+    </RadioGroup>
+    <Button
+        android:id="@+id/setButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Set"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_bg"
+        />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/chooserLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:layout_below="@+id/toolbar">
+        <TextView
+            android:paddingTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Set Number"
+            android:textSize="20dp"/>
+        <androidx.cardview.widget.CardView
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="70dp"
+            android:id="@+id/createNewNumber"
+            android:layout_width="160dp"
+            android:layout_height="170dp"
+            android:background="@android:color/transparent"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardElevation="0dp"
+            app:cardPreventCornerOverlap="false">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/card_bg">
+          <ImageButton
+              android:id="@+id/addButton"
+              android:layout_width="40dp"
+              android:layout_height="40dp"
+                android:layout_centerInParent="true"
+              android:background="@drawable/ic_add_circle_black_24dp"
+              />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addButton"
+                android:layout_centerInParent="true"
+                android:text="Create New Number"
+                android:textColor="@color/white"
+                />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_marginEnd="10dp"
+            android:id="@+id/chooseFromContact"
+            android:layout_width="160dp"
+            android:layout_height="170dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="70dp"
+            android:background="@android:color/transparent"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardElevation="0dp"
+            app:cardPreventCornerOverlap="false">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="3dp"
+                android:background="@drawable/card_bg">
+                <ImageButton
+                    android:id="@+id/chooseContact"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/ic_contact_phone_black_24dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/chooseContact"
+                    android:layout_centerInParent="true"
+                    android:text="Choose From Contact"
+                    android:textColor="@color/white"
+                    android:textAlignment="center"
+                    />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

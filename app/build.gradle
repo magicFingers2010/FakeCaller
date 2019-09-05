@@ -1,0 +1,40 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.faker.Faker"
+        minSdkVersion 26
+        targetSdkVersion 28
+        versionCode 2
+        versionName "2.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'pub.devrel:easypermissions:0.2.0'
+    implementation 'de.hdodenhof:circleimageview:3.0.0'
+    implementation 'com.github.jgabrielfreitas:BlurImageView:1.0.1'
+    implementation 'androidx.preference:preference:1.0.0'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.0.1'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'androidx.core:core:1.0.0'
+    implementation "com.android.support:support-compat:28.0.0"
+    implementation 'com.getkeepsafe.taptargetview:taptargetview:1.12.0'
+    implementation 'uk.co.samuelwall:material-tap-target-prompt:2.14.0'
+}
